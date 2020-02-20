@@ -1,0 +1,61 @@
+{% extends "main/header.html" %}
+{% block title %}Scratch Implementation of Stochastic Gradient Descent using Python{% endblock %}  <-- Please write the title of the Article-->
+
+{%block heading %} Scratch Implementation of Stochastic Gradient Descent using Python{% endblock %}       <-- Please write the heading of the article of the Article-->
+{% block subheading %}One of the Most used Optimization Algorithm in Classical Machine Learning{% endblock %}  <-- Please write the SubHeading of the article of the Article-->
+
+<!--Below part will create the main content for the application (You Need to change the below part to write the content)-->
+{% block MainContent %}
+<div class="shadow p-3 mb-5 bg-white rounded">
+<h3 class="text-center">Scratch Implementation of Stochastic Gradient Descent using Python</h3>
+<div class="text-justify">
+	<p>Stochastic Gradient Descent also called SGD is one of the most used classical machine learning optimization algorithms. It is the variation of Gradient Descent. In Gradient Descent, we iterate through entire data to update the weight. When there is a huge amount of dataset to train the model, in that situation Gradient Descent is very expensive in terms of time complexity. 
+	</p><p>So to reduce the time we use a slight variation of Gradient Descent also called SGD. In SGD, we pick up a single data point randomly from the dataset and update the weights based on the decision of that data point only. Following are the steps that we use in SGD:</p>
+	<blockquote class = "blockquote"> 
+		<ol>
+			<li>Randomly Initialize the weights/coefficients for the initial Iteration. These could be a small random value.</li>
+			<li>Initialize Learning Rate, No of Epochs to the algorithm. These are the hyperparameter, so can be tunned using cross-validation.</li>
+			<li>Make the prediction.</li>
+			<li>Calculate the error E.</li>
+			<li>Update the coefficient using the below formula (Choose a Random Point to Claculate the Gradient).</li>
+			<img src="img/sgd.PNG" alt="">
+			<li>Got to step 3 and check if the number of epochs is over or the algorithm has converged.</li>
+		</ol>
+	</blockquote>
+</p>
+<h4>Below is the Python Implementation of SGD from Scratch:</h4>
+
+<p style="margin-top: 0px">Given a data point, old coefficients, etc, this block of code will update the coefficient.</p>
+<p style="margin-top=0px"><script src="https://gist.github.com/kkaran0908/58d239fc9a4226386dc77eb837eb8f30.js"></script></p>
+
+<p style="margin-top: 0px">This block of code will make the prediction, given some unknow data point with coefficients.</p>
+<p style="margin-top=0px"><script src="https://gist.github.com/kkaran0908/ecccc57d6b40c6010092378539f9530a.js"></script></p>
+
+<p style="margin-top: 0px">This is the block of code it will take some parameters such as training data, learning rate, number of epochs, the range value r and will return the optimal coefficients. Learning rate, r, number of epochs are hyperparameters.</p>
+
+<p><script src="https://gist.github.com/kkaran0908/5af830d448d72e6b0f43e6a73e7f9af8.js"></script></p>
+
+<p style="margin-top: 0px">Finally, after calculating the coefficients we will make the prediction for test data.</p>
+<script src="https://gist.github.com/kkaran0908/16700318c65c464a296c23453fb22cc9.js"></script>
+
+<p style="margin-top: 0px"> You can execute the code by just copy-pasting the code in juypter notebook. You just need to provide the X_train, X_test, Number of Epochs, r, Learning Rate. If you are not able to run the code, do let me know in the comment. I will reply within one hour.</p>
+
+<blockquote>
+	<ol>
+		<li> Download the IRIS Data-Set : <a href="https://www.kaggle.com/c/boston-housing">https://www.kaggle.com/c/boston-housing</a></li>
+		<li>Perform all the above steps on this dataset.</li>
+		<li>After performing the above steps just comment in the comment section and let us know the Root Mean Squared Error of your model.</li>
+	</ol>
+</blockquote>
+<li>You can Find out Full Working Code Here : <a href="https://github.com/kkaran0908/Stochastic-Gradient-Descent-From-Scratch">https://github.com/kkaran0908/Stochastic-Gradient-Descent-From-Scratch</a></li>
+<p>If you are stuck with any of the step, just comment below, we will help you.</p>        
+</div> 
+</div>
+{% endblock %}
+
+
+{% block authorinfo %} 
+<p style="margin-top: 0px">This article is contributed by <a href="{{ url_for('aboutkaran')}}">  {{ author['name'] }}</a>.
+  <a href="{{ url_for('home')}}">Click Here </a>To Read More Articles. To work with us, <a href="{{ url_for('contactus')}}">Please fill out the form</a></p>
+{% endblock %}
+<!--Content Part of the the Article is Over-->

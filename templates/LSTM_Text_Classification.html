@@ -1,0 +1,90 @@
+{% extends "main/header.html" %}
+{% block title %}Text Classification using LSTM in Keras{% endblock %}  <-- Please write the title of the Article-->
+
+{%block heading %}Text Classification using LSTM in Keras{% endblock %}       <-- Please write the heading of the article of the Article-->
+{% block subheading %}Special Variant of RNNs to handle the Sequential Data{% endblock %}  <-- Please write the SubHeading of the article of the Article-->
+
+<!--Below part will create the main content for the application (You Need to change the below part to write the content)-->
+{% block MainContent %}
+<div class="shadow p-3 mb-5 bg-white rounded">
+<h3 class="text-center">Text Classification using LSTM in Keras</h3>
+<div class="text-justify">
+	<p>There are various classical machine learning algorithms, such as Naive Bayes, Logistic Regression, Support Vector Machine, etc. We can use these algorithms for text classification. Most of these classification algorithms assume that the words in the text are independent of each other, and these algorithms are not able to handle the dependency between different words in the dataset. Text data is sequential data where one particular word is dependent on several other words. Recurrent Neural Networks can handle sequential data. But RNNs has two major drawbacks:</p>
+	<blockquote class = "blockquote"> 
+		<ol>
+			<li>There is a vanishing gradient problem in RNNs.</li>
+			<li>There is an exploding gradient problem in RNNs.</li>
+		</ol>
+	</blockquote>
+</p>
+<p>Due to the above two drawbacks, sometime RNNs are not able to handle the Long Term dependencies. To handle these problems, there is a special variant of RNN called LSTM (Long Short Term Memory). It can handle long term as well as short term dependency without facing the vanishing as well as exploding gradient problem. So at the end of this article, you should be able to classify a text dataset using LSTM.</p>
+
+<h4>How we can feed the data to LSTM:</h4>
+
+<p style="margin-top: 0px">We have to feed the data to LSTM in a particular format.
+First, we will count all the unique words in the dataset, and according to the number of times the word has accord in the dataset, we will make a dictionary. We will sort this dictionary according to the number of times a word has occurred. Now we will check, at what position a word is occurring in the dictionary, and will assign that position(Numerical Value) as a representation of that word.</p>
+
+<p> Let suppose our text dataset is containing three sentences:<br>
+data = ["this dog is really fast" , "dog barks on the strangers" , "I like dogs who barks on strangers"] </p>
+<p>First, we will store all the unique words and all the words in the two different lists.</p>
+<p style="margin-top=0px"><script src="https://gist.github.com/kkaran0908/6da15317985d946e3c6ba789c7e42498.js"></script></script></p>
+
+<p style="margin-top: 0px">Now we will create the dictionary that will contain word as a key and number of times a word has occurred as the value. We will sort this dictionary according to the value.</p>
+<p style="margin-top=0px"><script src="https://gist.github.com/kkaran0908/e7bb298b1952314d17fdbe70d1217f73.js"></script></p>
+<p>Output:</p>
+<blockquote class = "blockquote"> 
+[('dog' : 3),<br>
+ ('strangers' : 2),<br>
+ ('on' : 2),<br>
+ ('barks' : 2),<br>
+ ('who' : 1),<br>
+ ('like' : 1),<br>
+ ('I' : 1),<br>
+ ('the' : 1),<br>
+ ('fast' : 1),<br>
+ ('really' : 1),<br>
+ ('is' : 1),<br>
+ ('this' : 1)]<br>
+ </blockquote>
+
+<p style="margin-top: 0px">After the below code entire sentence will get converted into the numerical representation. </p>
+
+<p><script src="https://gist.github.com/kkaran0908/60add4c173815362b171838bb5701f19.js"></script></script></p>
+
+<p style="margin-top: 0px">new_data contains the Numerical representation of the text data, and it will look like:</p>
+<p>[[ 12, 1, 11, 10, 9 ] , <br>[ 1, 4, 3, 8, 2 ] , <br>[ 7, 6, 1, 5, 4, 3, 2 ]]</p>
+
+<p>
+We can see that the "dog" has occurred the highest number of times, so it has been assigned 1, "strangers" has occurred second-highest times, so it has got an encoding of 2 and so on.</p>
+<p>We will break the dataset in to train and test set.</p>
+<p><script src="https://gist.github.com/kkaran0908/9e0ab4c7195da47f09586a67d9fb90cb.js"></script></p>
+
+<p style="margin-top: 0px">In the dataset, all the sentences will not be having the same length, so below code will help us in making the length of each sentence equal. It will pad extra encoding if the length is smaller then 600 words and remove less occurring words if the length is more than 600 words.</p>
+<p><script src="https://gist.github.com/kkaran0908/ffd2b066bd3112d6475044b6c3407cca.js"></script></p>
+<p style="font-weight: bold;">Now we will classify our sentences or dataset. First, we will import all the required libraries:<br>
+<script src="https://gist.github.com/kkaran0908/a2459a4765ea54097f8235e5e1c4fb5f.js"></script></p>
+<p style="font-weight: bold;">Define the LSTM architecture: <br><script src="https://gist.github.com/kkaran0908/ae1aea2c2c4aa227b01da30657b52c04.js"></script></p>
+<p style="font-weight: bold;">Train the model and save the history:<br>
+<script src="https://gist.github.com/kkaran0908/1024c1ce63c33ec45e100be33912dbf6.js"></script></p>
+<p style="font-weight: bold;">Evaluate the trained model: <br>
+<script src="https://gist.github.com/kkaran0908/20c02aa89e570f3ba3ed2916db125317.js"></script></p>
+<p>Exercise:</p>
+<blockquote>
+	<ol>
+		<li> Download the Amazon Review Data-Set : <a href="https://www.kaggle.com/snap/amazon-fine-food-reviews">https://www.kaggle.com/snap/amazon-fine-food-reviews</a></li>
+		<li>Perform all the above steps on this dataset.</li>
+		<li>After performing the above steps just comment in the comment section and let us know the accuracy score of your model.</li>
+	</ol>
+</blockquote>
+<li>You can Find out Full Working Code Here : <a href="https://github.com/kkaran0908/LSTM-on-Text-Dataset">https://github.com/kkaran0908/LSTM-on-Text-Dataset</a></li>
+<p>If you are stuck with any of the step, just comment below, we will help you.</p>        
+</div> 
+</div>
+{% endblock %}
+
+
+{% block authorinfo %} 
+<p style="margin-top: 0px">This article is contributed by <a href="{{ url_for('aboutkaran')}}">  {{ author['name'] }}</a>.
+  <a href="{{ url_for('home')}}">Click Here </a>To Read More Articles. To work with us, <a href="{{ url_for('contactus')}}">Please fill out the form</a></p>
+{% endblock %}
+<!--Content Part of the the Article is Over-->

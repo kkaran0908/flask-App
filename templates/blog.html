@@ -1,0 +1,346 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>All About Latest Computer Science Technologies</title>
+
+	<!-- Custom fonts for this template -->
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/vendor/fontawesome-free/css/all.min.css') }}">
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/vendor/bootstrap/css/bootstrap.min.css') }}">
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/css/clean-blog.css') }}">
+	<link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+	<!-- Custom styles for this template -->
+
+</head>
+
+<body>
+
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+		<div class="container">
+			<a class="navbar-brand" href= "{{ url_for('blog')}}">Tech World</a>
+			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+				Menu
+				<i class="fas fa-bars"></i>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href= "{{ url_for('blog') }}">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href= "{{ url_for('about') }}">AboutUs</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href= "{{ url_for('home') }}">Popular Posts</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href= "{{ url_for('contactus') }}">Work With Us</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Page Header -->
+	<header class="masthead" style="background-image: url('static/img/home-bg.jpg')">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-md-10 mx-auto">
+					<div class="site-heading">
+						<h1>Tech World</h1>
+						<span class="subheading">An Open Computer Science Portal</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Main Content -->
+	<div class="container-fluid">
+		<!--<div class="col-lg-30 col-md-10">-->
+			<div class="row">
+				<div class = 'col'>
+					<div class="shadow p-3 mb-5 bg-light rounded">
+					<div class="text-center">
+						<h4>Latest Articles</h4>
+					</div>
+					<div class="post-preview">
+							<a href= "{{ url_for('LSTM_Text_Classification') }}">
+								<h6 class="post-subtitle">
+									 Text Classification using LSTM in Keras
+								</h6>
+							</a>
+							<p class="post-meta">Posted by
+								<a href= "{{ url_for('aboutkaran') }}">Karan Kumar Rajput</a>
+							on Feb 14, 2020</p>
+						</div>
+					<div class="post-preview">
+							<a href= "{{ url_for('Gradient_Descent') }}">
+								<div class="post-subtitle">
+									 Scratch Implementation of Gradient Descent using Python
+								</div>
+							</a>
+							<p class="post-meta">Posted by
+								<a href= "{{ url_for('aboutkaran') }}">Karan Kumar Rajput</a>
+							on Feb 15, 2020</p>
+						</div>
+					<div class="post-preview">
+							<a href= "{{ url_for('Text_Data_Preprocessing') }}">
+								<h6 class="post-subtitle">
+									 Text Data Pre-Processing using Python
+								</h6>
+							</a>
+							<p class="post-meta">Posted by
+								<a href= "{{ url_for('aboutkaran') }}">Karan Kumar Rajput</a>
+							on Feb 14, 2020</p>
+						</div>
+						<div class="post-preview">
+							<a href= "{{ url_for('laptop_machine_learning') }}">
+								<h6 class="post-subtitle">
+									 Which Laptop to Buy for Machine Learning and Deep Learning
+								</h6>
+							</a>
+							<p class="post-meta">Posted by
+								<a href= "{{ url_for('aboutkaran') }}">Karan Kumar Rajput</a>
+							on August 24, 2019</p>
+						</div>
+						<div class="post-preview">
+							<a href= "{{ url_for('Why_Appear_GATE_CSE') }}">
+								<h6 class="post-subtitle">
+									Why One Should Appear in the GATE Computer Science.
+								</h6>
+							</a>
+							<p class="post-meta">Posted by
+								<a href= "{{ url_for('aboutkaran') }}">Karan Kumar Rajput</a>
+							on August 24, 2019</p>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="row">
+						<div class = 'col'>
+							<div class="shadow p-3 mb-5 bg-white rounded">
+								<a href= "{{ url_for('Gradient_Descent') }}">
+									<img src="static/img/home-bg.jpg" class="card-img-top" alt="...">
+									<div class="card-body">
+
+										<h5 class="card-title"><h5 style="text-align: justify;"> Scratch Implementation of Gradient Descent using Python</h5></h5>
+									</a>
+									<div class="post-preview">
+										<p class="post-meta">Posted by
+											<a href= "{{ url_for('aboutkaran') }}">Karan Kumar Rajput</a>
+										on 15 Feb, 2020</p>
+									</div>
+							</div>
+						</div>
+						</div>
+						<div class = 'col'>
+							<div class="shadow p-3 mb-5 bg-white rounded">
+								<a href= "{{ url_for('Text_Data_Preprocessing') }}">
+									<img src="static/img/home-bg.jpg" class="card-img-top" alt="...">
+									<div class="card-body">
+
+										<h5 class="card-title"><h5 style="text-align: justify;">Text Data Pre-Processing using Python</h5></h5>
+									</a>
+									<div class="post-preview">
+										<p class="post-meta">Posted by
+											<a href= "{{ url_for('aboutkaran') }}">Karan Kumar Rajput</a>
+										on Feb 14, 2020</p>
+									</div>
+							</div>
+						</div>
+
+					</div>
+						<div class = 'col'>
+							<div class="shadow p-3 mb-5 bg-white rounded">
+								<a href= "{{ url_for('Why_Appear_GATE_CSE') }}">
+									<img src="static/img/GATECSE.png" class="card-img-top" alt="...">
+									<div class="card-body">
+										<h5 class="post-title">
+											<h5 style="text-align: justify;">
+												Why You Should Plan to Prepare for the GATE
+											</h5>
+										</h5>
+										<div class="post-preview">
+											<p class="post-meta">Posted by
+												<a href= "{{ url_for('aboutkaran') }}">Karan Kumar Rajput</a>
+											on December 29, 2019</p>
+										</div>
+									</div>
+								</a>
+						</div>
+						</div>
+                    </div>
+                    <div class="row">
+						<div class = 'col'>
+							<div class="shadow p-3 mb-5 bg-white rounded">
+								<a href= "{{ url_for('laptop_machine_learning') }}">
+									<img src="static/img/laptop.PNG" class="card-img-top" alt="...">
+									<div class="card-body">
+
+										<h5 class="card-title"><h5 style="text-align: justify;"> Which Laptop to Buy for Machine Learning and Deep Learning</h5></h5>
+									</a>
+									<div class="post-preview">
+										<p class="post-meta">Posted by
+											<a href= "{{ url_for('aboutkaran') }}">Karan Kumar Rajput</a>
+										on December 29, 2019</p>
+									</div>
+							</div>
+						</div>
+						</div>
+                       <div = class="col">
+						<div class="shadow p-3 mb-5 bg-white rounded">
+								<a href= "{{ url_for('ML_DL_Interview_Question') }}">
+									<img src="static/img/home-bg.jpg" class="card-img-top" alt="...">
+									<div class="card-body">
+
+										<h5 class="card-title"><h5 style="text-align: justify;">Machine Learning and Deep Learning Interview Question</h5></h5>
+									</a>
+									<div class="post-preview">
+										<p class="post-meta">Posted by
+											<a href= "{{ url_for('aboutkaran') }}">Karan Kumar Rajput</a>
+										on Feb 20, 2020</p>
+									</div>
+							</div>
+						</div>
+					</div>
+						<!--<div class = 'col'>
+							<div class="shadow p-3 mb-5 bg-white rounded">
+								<a href="Text_Data_Preprocessing.html">
+									<img src="img/home-bg.jpg" class="card-img-top" alt="...">
+									<div class="card-body">
+
+										<h5 class="card-title"><h5 style="text-align: justify;">Text Data Pre-Processing using Python</h5></h5>
+									</a>
+									<div class="post-preview">
+										<p class="post-meta">Posted by
+											<a href="index.html">Karan Kumar Rajput</a>
+										on Feb 14, 2020</p>
+									</div>
+							</div>
+						</div>
+
+					</div>
+						<div class = 'col'>
+							<div class="shadow p-3 mb-5 bg-white rounded">
+								<a href="Why_Appear_GATE_CSE.html">
+									<img src="img/GATECSE.png" class="card-img-top" alt="...">
+									<div class="card-body">
+										<h5 class="post-title">
+											<h5 style="text-align: justify;">
+												Why You Should Plan to Prepare for the GATE
+											</h5>
+										</h5>
+										<div class="post-preview">
+											<p class="post-meta">Posted by
+												<a href="index.html">Karan Kumar Rajput</a>
+											on December 29, 2019</p>
+										</div>
+									</div>
+								</a>
+						</div>
+						</div>-->
+                    </div>
+					</div>
+					<!--Container Finished-->
+				<div class = 'col'>
+					<div class="shadow p-3 mb-5 bg-light rounded">
+					<div class="text-center">
+						<h4>Popular Posts</h4>
+					</div>
+						<div class="post-preview">
+							<a href= "{{ url_for('laptop_machine_learning') }}">
+								<h6 class="post-subtitle">
+									 Which Laptop to Buy for Machine Learning and Deep Learning
+								</h6>
+							</a>
+							<p class="post-meta">Posted by
+								<a href= "{{ url_for('aboutkaran') }}">Karan Kumar Rajput</a>
+							on August 24, 2019</p>
+						</div>
+						<div class="post-preview">
+							<a href= "{{ url_for('Why_Appear_GATE_CSE') }}">
+								<h6 class="post-subtitle">
+									Why One Should Appear in the GATE Computer Science.
+								</h6>
+							</a>
+							<p class="post-meta">Posted by
+								<a href= "{{ url_for('aboutkaran') }}">Karan Kumar Rajput</a>
+							on August 24, 2019</p>
+						</div>
+					</div>
+				</div>
+                </div>
+            </div>
+
+
+			<hr>
+			<!-- Pager -->
+			<div class="clearfix">
+				<a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+			</div>
+		</div>
+	</div>
+<hr>
+
+<!-- Footer -->
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-md-10 mx-auto">
+				<ul class="list-inline text-center">
+					<li class="list-inline-item">
+
+							<div class="fb-share-button" data-href="https://kkaran0908.github.io/blog.html" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fkkaran0908.github.io%2Fblog.html&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">
+
+							<span class="fa-stack fa-lg">
+								<i class="fas fa-circle fa-stack-2x"></i>
+								<i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+							</span>
+					</li>
+					<li class="list-inline-item">
+							<div class="fb-share-button" data-href="https://kkaran0908.github.io/blog.html" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fkkaran0908.github.io%2Fblog.html&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">
+							<span class="fa-stack fa-lg">
+								<i class="fas fa-circle fa-stack-2x"></i>
+								<i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+							</span>
+					</li>
+					<li class="list-inline-item">
+						<a href="#">
+							<span class="fa-stack fa-lg">
+								<i class="fas fa-circle fa-stack-2x"></i>
+								<i class="fab fa-github fa-stack-1x fa-inverse"></i>
+							</span>
+						</a>
+					</li>
+				</ul>
+				<p class="copyright text-muted">Copyright &copy; Tech World 2019</p>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+
+<script type = "text/script" src = "{{ url_for('static', filename = 'styles/endor/jquery/jquery.min.js') }}" ></script>
+
+<script type = "text/script" src = "{{ url_for('static', filename = 'styles/vendor/bootstrap/js/bootstrap.bundle.min.js') }}" ></script>
+<script type = "text/script" src = "{{ url_for('static', filename = 'styles/js/clean-blog.min.js') }}" ></script>
+<!--<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+ Custom scripts for this template 
+<script src="js/clean-blog.min.js"></script>-->
+
+</body>
+
+</html>

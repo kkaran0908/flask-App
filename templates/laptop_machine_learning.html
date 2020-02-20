@@ -1,0 +1,56 @@
+﻿{% extends "main/header.html" %}
+
+{% block title %}Which Laptop to Buy for Machine Learning and Deep Learning{% endblock %}  <-- Please write the title of the Article-->
+
+{%block heading %} System Configurations For Machine Learning and Deep Learning{% endblock %}       <-- Please write the heading of the article of the Article-->
+{% block subheading %}One of the Most Important Part of Your Data Science Journey.{% endblock %}  <-- Please write the SubHeading of the article of the Article-->
+
+
+
+
+
+{% block MainContent %}
+
+ <div class="shadow p-3 mb-5 bg-white rounded">
+          <h3 class="text-center">System Configurations for Machine Learning & Deep Learning</h3>
+          <div class="text-justify">
+            <p>Good hardware is always essential for a hassle-free data science journey. I bought my laptop back in 2014, during the 1st year of my B.Tech. It had 4GB RAM. But in early 2018, whenever I used to train any machine learning model, It used to take a very long time, even with a minimal dataset, and most of the time, I used to face the memory error due to the less size of RAM. Machine Learning and Deep Learning require high-performance computing resources. But due to financial constraints, a student can't buy a costly system. So in this post, we are going to talk about, what are the necessary configuration that a system must have to train a machine learning and deep learning model in a reasonable time and with a fair amount of dataset. </p>
+            <p>Here I will not provide any specific laptop/brand, but I will try to provide the details about what configuration’s laptop will be sufficient for machine learning and deep learning tasks.</p>
+            <img class="img-fluid" src="static/img/laptop.PNG" alt="">
+            <h4>RAM Size:</h4>
+
+            <p style="margin-top: 0px">At least 8GB RAM with expandable memory up to at least 16GB is a must-have. With a larger RAM size, you can train and test your model with a large number of data points. There are some classical machine learning algorithms, such as K-Nearest Neighbors, where we need to have larger RAM to train & test the model. If you are having an option of expending the RAM size, it might be beneficial in case when you do not want to change your system; instead, you can increase the RAM size of your system by adding the external RAM. </p>
+
+            <h4>Hard Disk:</h4>
+
+            <p style="margin-top: 0px">Sometime your dataset size may be as large as 200 GB(in college life, datasets are not that big, but when you will work in some organization. This size will be huge.), so you should have at least 500GB hard disk. As hard disk are cheaper, you should go for 1 TB; it will be beneficial if you go for SSD, as it will reduce the booting time of the system drastically and will increase the speed of your system like hell. With the help of larger hard disk, you can store Games, Datasets, Movies in your system without worrying about memory. </p>
+
+            <h4>Processor:</h4>
+
+            <p style="margin-top: 0px">At least Intel i5 8th Generation, if possible, go for higher but it is also sufficient as of now. During the machine learning journey, you will often see that; you require many numbers of CPUs in your system. Because we can train our machine learning model using all the processor, by changing a few keyword/lines in the code. It will drastically reduce the training time of your model. I will suggest you only go with intel. Higher the processor lesser the training and testing time of your machine learning or deep learning model is going to be. </p>
+
+
+            <h4>Graphics Card:</h4>
+
+            <p style="margin-top: 0px">If you are interested in gaming/deep learning, Graphics Card is a must-have part of your system. As the deep Learning models take a very long time in training, GPUs will help in reducing the training time of your model. GPUs only work on the algorithms that can be trained using BackPropogation. It does not work with classical machine learning algorithms. You should go with at least NVIDIA GeForce GTX 1050 with a RAM size 4GB. You can go with an advanced graphics card as well, but the cost of the system will increase drastically. Only go with the Nvidia Graphics card.</p>
+
+            <h4>Screen Size:</h4>
+
+            <p style="margin-top: 0px">Most of the laptops with these configurations will be having at least 15.6 inches screen size. I think it is sufficient for good user experience.</p>
+
+            <h4>Screen Size:</h4>
+
+            <p style="margin-top: 0px">Most of the laptops with these configurations will not be having a very long battery life, as there will be a high cooling system installed in the system, and it will drain the battery very fast. I will suggest to go with the one having the most extended battery life; it will be helpful.</p>
+
+            <p>Almost all the companies are trying to provide better service to their customers. You can go with any brand having the above configurations (according to your budget). Dell, HP, with the same arrangements, will be slightly expensive as compare to ASUS, ACER, MSI, etc. If you want my opinion, I will suggest you go with either MSI, ASUS, or ACER. It will cost you around 65k.</p>
+        </div>
+      </div>
+{% endblock %}
+<!--Author Information Part-->
+{% block authorinfo %} 
+<p style="margin-top: 0px">This article is contributed by <a href="{{ url_for('aboutkaran')}}">  {{ author['name'] }}</a>.
+  <a href="{{ url_for('home')}}">Click Here </a>To Read More Articles. To work with us, <a href="{{ url_for('contactus')}}">Please fill out the form</a></p>
+{% endblock %}
+
+
+  
